@@ -23,6 +23,9 @@ jobs:
         with:
           go-version: ">=1.22.5"
 
+      - name: Install Admin dashboard UI dependencies
+        run: npm --prefix=./ui ci
+
       - name: Build Admin dashboard UI
         run: npm --prefix=./ui run build
 
